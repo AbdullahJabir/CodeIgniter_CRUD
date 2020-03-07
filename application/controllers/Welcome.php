@@ -24,7 +24,8 @@ class Welcome extends CI_Controller {
 		$sdata['message']='Student added successfully !!!';
 
 		$this->session->set_userdata($sdata);
-		 redirect('add-student');
+		
+		 redirect(base_url().'add-student');
 
 
 
@@ -33,6 +34,7 @@ class Welcome extends CI_Controller {
 	public function view_student()
 	{
 		$data = array();
+		/*go to model*/
 		$data['all_student_info'] = $this->save_studentt->all_student_info();
 		$data['admin_main_content'] = $this->load->view('pages/view',$data,true);
 		$this->load->view('dashboard',$data);
@@ -55,8 +57,7 @@ class Welcome extends CI_Controller {
 		$sdata['message']='Student added successfully !!!';
 
 		$this->session->set_userdata($sdata);
-		redirect('view-student');
-
+		redirect(base_url().'view-student');
 
 		}
 
