@@ -320,7 +320,9 @@
 
             <li><a href="<?php echo base_url()?>add-student"><i class="fa fa-circle-o text-red"></i> <span>Add Student</a></li>
             <li><a href="<?php echo base_url()?>view-student"><i class="fa fa-circle-o text-yellow"></i> <span>Manage Student</span></a></li>
-            <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+            <li><a href="<?php echo base_url()?>edit-admin"><i class="fa fa-circle-o text-aqua"></i> <span>Admin Add</span></a></li>
+
+            <li><a href="<?php echo base_url()?>view-admin"><i class="fa fa-circle-o text-aqua"></i> <span>Admin View</span></a></li>
           </ul>
         </section>
         <!-- /.sidebar -->

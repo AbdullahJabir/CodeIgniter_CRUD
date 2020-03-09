@@ -18,3 +18,8 @@ $route['update-student'] = 'welcome/update_student';
 $route['delete-student/(.+)'] = 'welcome/delete_student/$1';
 
 $route['show-student/(.+)'] = 'welcome/show_student/$1';
+
+$route['edit-admin'] = 'LearnHunter/edit_admin';
+
+$route['save-admin'] = 'LearnHunter/save_admin';
+$route['view-admin'] = 'LearnHunter/view_admin';

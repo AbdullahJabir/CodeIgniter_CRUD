@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class LearnHunter extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -22,11 +22,35 @@ class Welcome extends CI_Controller {
 	{
 		$data = array();
 		$data['admin_main_content'] = $this->load->view('pages/dashboardd','',true);
-		$this->load->view('dashboard',$data);}
+		$this->load->view('dashboard',$data);
+	}
 
-	public function gazi()
+	public function edit_admin()
 	{
 
-		$this->load->view('learn');
+		$data = array();
+		$data['admin_main_content'] = $this->load->view('pages/addAdmin','',true);
+		$this->load->view('dashboard',$data);
 	}
+
+	public function save_admin(){
+
+		$this->save_studentt->save_admin_info();
+		$sdata=array();
+		$sdata['message']='Admin added successfully !!!';
+
+		$this->session->set_userdata($sdata);
+		
+		 redirect(base_url().'add-student');
+	}
+
+	public function view_admin()
+	{
+		$data = array();
+		/*go to model*/
+		$data['all_student_info'] = $this->save_studentt->all_admin_info();
+		$data['admin_main_content'] = $this->load->view('pages/admin_view',$data,true);
+		$this->load->view('dashboard',$data);
+	}
+	
 }

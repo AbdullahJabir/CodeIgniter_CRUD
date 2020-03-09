@@ -384,6 +384,8 @@
                       <label for="exampleInputEmail1">Student Roll</label>
                       <input type="text" class="form-control" id="exampleInputEmail1" placeholder="STUDENT Roll" name="student_roll"  value="<?php echo $all_student_info_by_id->student_roll;?>">
                     </div>
+
+                
                     <div class="checkbox">
                       <label>
                         <input type="checkbox"> Check me out

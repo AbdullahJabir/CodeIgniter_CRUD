@@ -23,12 +23,10 @@
                   <table id="example2" class="table table-bordered table-hover">
                     <thead>
                       <tr>
-                        <th>SN</th>
-                        <th>Name</th>
-                        <th>Phone</th>
-                        <th>Roll</th>
+                        <th>Id</th>
                         <th>Email</th>
-                        <th>Action</th>
+                        <th>Image</th>
+                        
                       </tr>
                     </thead>
                     <tbody>
@@ -40,15 +38,14 @@
                         ?>
                      
                       <tr>
-                        <td><?php echo $value->student_id?></td>
-                        <td><?php echo $value->student_name?></td>
-                        <td><?php echo $value->student_phone?></td>
-                        <td> <?php echo $value->student_roll?></td>
-                        <td> <?php echo $value->admin_email?></td>
+                        <td><?php echo $value->admin_id ?></td>
+                        <td><?php echo $value->admin_email ?></td>
+                        <td><img src="<?php echo $value->admin_image ?> " style="height: 80px;width: 80px;"/></td>
+                        
                         <td>
-                          <a class="btn btn-info" href="<?php echo base_url()?>edit-student/<?php echo $value->student_id ?>">Edit</a>
-                          <a class="btn btn-success" href="<?php echo base_url()?>show-student/<?php echo $value->student_id ?>">Show</a>
-                          <a  class="btn btn-danger" href="<?php echo base_url()?>delete-student/<?php echo $value->student_id ?>">Delete</a>
+                          <a class="btn btn-info" href="#">Edit</a>
+                          <a class="btn btn-success" href="#">Show</a>
+                          <a  class="btn btn-danger" href="#">Delete</a>
                         </td>
                       </tr>
                     <?php }?>
